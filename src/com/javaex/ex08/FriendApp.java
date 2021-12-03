@@ -25,7 +25,7 @@ public class FriendApp {
 		}
 		
 		for(int i=0;i<fArr.length;i++) {
-			System.out.println("이름:"+fArr[i].getName()+"  핸드폰:"+fArr[i].getHp()+"  학교:"+fArr[i].getSchool());
+			fArr[i].showInfo();
 		}
 		
 		
