@@ -9,7 +9,7 @@ public class CalcApp {
     	Scanner sc = new Scanner(System.in);
     	String exp;
     	String operator;
-    	int a,b;
+    	int num1, num2;
     
     	while(true) {
     		System.out.print(">> ");
@@ -19,27 +19,27 @@ public class CalcApp {
     			break;
     		}
     		operator = exp.split(" ")[1];
-    		a=Integer.parseInt(exp.split(" ")[0]);
-    		b=Integer.parseInt(exp.split(" ")[2]);
+    		num1=Integer.parseInt(exp.split(" ")[0]);
+    		num2=Integer.parseInt(exp.split(" ")[2]);
     		switch(operator){
     			case "+" :
     				Add add = new Add();
-    				add.setValue(a, b);
+    				add.setValue(num1, num2);
     				System.out.println(add.calculate());
     				break;
     			case "-" :
     				Sub sub = new Sub();
-    				sub.setValue(a, b);
+    				sub.setValue(num1, num2);
     				System.out.println(sub.calculate());
     				break;
     			case "*" :
     				Mul mul = new Mul();
-    				mul.setValue(a, b);
+    				mul.setValue(num1, num2);
     				System.out.println(mul.calculate());
     				break;
     			case "/" :
     				Div div = new Div();
-    				div.setValue(a, b);
+    				div.setValue(num1, num2);
     				System.out.println(div.calculate());
     				break;
     			default :
