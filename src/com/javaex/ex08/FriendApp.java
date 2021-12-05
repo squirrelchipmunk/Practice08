@@ -11,16 +11,14 @@ public class FriendApp {
 		Friend [] fArr = new Friend[3];
 		System.out.println("친구를 3명 등록해주세요.");
 
-		String [] fInfo = new String[3];
-		for(int i=0; i<fInfo.length; i++) {
-			fInfo[i] = sc.nextLine();
-		}
-		
+		String fInfo;
 		String name, hp, school;
+		
 		for(int i=0; i<fArr.length;i++) {
-			name = fInfo[i].split(" ")[0];
-			hp = fInfo[i].split(" ")[1];
-			school = fInfo[i].split(" ")[2];
+			fInfo = sc.nextLine();
+			name = fInfo.split(" ")[0];
+			hp = fInfo.split(" ")[1];
+			school = fInfo.split(" ")[2];
 			fArr[i] = new Friend(name, hp, school);
 		}
 		
